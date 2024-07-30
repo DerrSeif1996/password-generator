@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main id="password-generator">
+        <section class="title-section">
+            <h1 id="text1" class="main-title">Generate a</h1>
+            <h1 id="text2" class="main-title">random password</h1>
+            <h3 id="text3" class="subtitle">Never use an insecure password again</h3>
+            
+        </section>
+        <hr>
+        <section>
+            <h3 id="text4" class="subtitle">Customize Your Password</h3>
+        </section>
+        
+        <section>
+            <label>
+                <input type="checkbox" name="Upperchar" id="Upperchar-checkbox">
+                Upperchar
+            </label>
+            <label>
+                <input type="checkbox" name="lowerchar" id="lowerchar-checkbox">
+                lowerchar
+            </label>
+            <label>
+                <input type="checkbox" name="numbers" id="numbers-checkbox">
+                numbers
+            </label>
+            <label>
+                <input type="checkbox" name="symbols" id="symbols-checkbox">
+                symbols
+            </label>
+        </section>
+        <hr>
+        <section class="generate-button-section">
+            <button id="generate-password-button" onclick="generatePasswords()">Generate password</button>
+        </section>
+        <hr>
+        <section class="password-display-section">
+            <span class="password-output" id="password1" aria-live="polite">Hello, World!</span>
+            <span class="password-output" id="password2" aria-live="polite">Hello, World!</span>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

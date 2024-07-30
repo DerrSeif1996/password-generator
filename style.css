@@ -1,0 +1,88 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1C1C1C;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Main container */
+#password-generator {
+    background-color: #1F2937;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title Section */
+.title-section {
+    margin-bottom: 20px;
+    text-align: left;
+}
+#text1{
+    color: #ffffff;
+}
+#text4{
+    text-align: center;
+    color: #ffffff;
+}
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #4CAF50; /* Green color for emphasis */
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Generate Button Section */
+.generate-button-section {
+    margin: 20px 0;
+}
+
+#generate-password-button {
+    background-color: #10B981; /* Green background */
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#generate-password-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Password Display Section */
+.password-display-section {
+    margin-top: 20px;
+}
+.password-display-section{
+    display: flex;
+    gap: 20px;
+}
+.password-output {
+    
+    font-size: 18px;
+    color: #fffbfb;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #273549;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+
+}
