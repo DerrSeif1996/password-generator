@@ -23,6 +23,18 @@ let Nmbrschecked = document.querySelector("#numbers-checkbox");
 let symblschecked = document.querySelector("#symbols-checkbox");
 
 
+
+
+function generatePasswords(){
+        password1.textContent = "";
+        password2.textContent = "";
+        updateCheckboxStates();
+        if (!customization()) {
+            return; 
+        }
+        display();
+}
+
 function updateCheckboxStates() {
     Uprchrctrs = Uprchrctrschecked.checked;
     Lwrchrctrs = Lwrchrctrschecked.checked;
@@ -30,41 +42,13 @@ function updateCheckboxStates() {
     symbls = symblschecked.checked;
 }
 
-function generatePasswords(){
-        password1.textContent = "";
-        password2.textContent = "";
-        let rangeI = range.value ; 
-        updateCheckboxStates();
-        if (!Uprchrctrs && !Lwrchrctrs && !Nmbrs && !symbls) {
-            password1.textContent = "check somthing";
-            password2.textContent = "check somthing";
-            return ; // Exit function early
-        }
-       
-        
-        const combinedarray = newarray();
-        for( let i = 0 ; i < rangeI ; i++){
-            password1.textContent += combinedarray[randomNumberGenerator(combinedarray)]; 
-            password2.textContent += combinedarray[randomNumberGenerator(combinedarray)]; 
-        }
-}
-
-
 function newarray(){
     
     let newArray = [];
-    if (Uprchrctrs) {
-        newArray = newArray.concat(Uppercharacters);
-    }
-    if (Lwrchrctrs) {
-        newArray = newArray.concat(Lowercharacters);
-    }
-    if (Nmbrs) {
-        newArray = newArray.concat(Numbers);
-    }
-    if (symbls) {
-        newArray = newArray.concat(symbols);
-    }
+    newArray = Uprchrctrs ? newArray.concat(Uppercharacters): newArray ;
+    newArray = Lwrchrctrs ? newArray.concat(Lowercharacters): newArray ;
+    newArray = Nmbrs ? newArray.concat(Numbers): newArray ;
+    newArray = symbls ? newArray.concat(symbols): newArray ;
     return newArray;
 
 }
@@ -72,4 +56,22 @@ function newarray(){
 function randomNumberGenerator(array){
     let randomNumber = Math.floor(Math.random()*array.length)
     return randomNumber ;
+}
+
+function customization() {
+    if (!Uprchrctrs && !Lwrchrctrs && !Nmbrs && !symbls) {
+        password1.textContent = "Please check ";
+        password2.textContent = "Please check";
+        return false; 
+    }
+    return true;
+}
+
+function display(){
+    let rangeI = range.value ; 
+    const combinedarray = newarray();
+        for( let i = 0 ; i < rangeI ; i++){
+            password1.textContent += combinedarray[randomNumberGenerator(combinedarray)]; 
+            password2.textContent += combinedarray[randomNumberGenerator(combinedarray)]; 
+        }
 }
