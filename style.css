@@ -63,16 +63,15 @@ body {
 }
 
 #generate-password-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #a3e0a6; /* Darker green on hover */
 }
 
 /* Password Display Section */
-.password-display-section {
-    margin-top: 20px;
-}
+
 .password-display-section{
-    display: flex;
+    display: block;
     gap: 20px;
+    margin-top: 20px;
 }
 .password-output {
     
@@ -85,4 +84,7 @@ body {
     border: 1px solid #ccc;
     text-align: left;
 
+}
+.checkboxes{
+    margin-top: 10px;
 }

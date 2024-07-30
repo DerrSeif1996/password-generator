@@ -16,6 +16,7 @@ let symbls = false ;
 
 let password1 = document.querySelector("#password1");
 let password2 = document.querySelector("#password2");
+let range = document.querySelector("#enterrange");
 let Uprchrctrschecked = document.querySelector("#Upperchar-checkbox");
 let Lwrchrctrschecked = document.querySelector("#lowerchar-checkbox");
 let Nmbrschecked = document.querySelector("#numbers-checkbox");
@@ -32,6 +33,7 @@ function updateCheckboxStates() {
 function generatePasswords(){
         password1.textContent = "";
         password2.textContent = "";
+        let rangeI = range.value ; 
         updateCheckboxStates();
         if (!Uprchrctrs && !Lwrchrctrs && !Nmbrs && !symbls) {
             password1.textContent = "check somthing";
@@ -41,7 +43,7 @@ function generatePasswords(){
        
         
         const combinedarray = newarray();
-        for( let i = 0 ; i < 8 ; i++){
+        for( let i = 0 ; i < rangeI ; i++){
             password1.textContent += combinedarray[randomNumberGenerator(combinedarray)]; 
             password2.textContent += combinedarray[randomNumberGenerator(combinedarray)]; 
         }
